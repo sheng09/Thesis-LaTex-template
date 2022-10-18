@@ -6,14 +6,14 @@ This template is a modified version based on the template [here](https://service
 # 0. Requirements
 
 
-If using Linux, you can install TexLive by running `sudo apt install texlive-full` on `Ubuntu` or similar commands on Centos, etc. If using Mac, you can install MacTeX, you can download the .pkg file [here](https://tug.org/mactex/index.html).
+If using Linux, you can install `TexLive` by running `sudo apt install texlive-full` on Ubuntu or similar commands on Centos, etc. If using Mac, you can install `MacTeX`, you can download the .pkg file [here](https://tug.org/mactex/index.html).
 
 
 # 1. To compile and generate a pdf
 
-To compile and generate a pdf, you can run the file `commands.sh`. It will generate a file named `main.pdf`. The `commands.sh` is a bash script, you can run it by typing `bash commands` in your terminal. You can also run individual commands as listed in the `commands.sh` file to escape some repeated steps when composing your thesis. 
+To compile and generate a pdf, you can run the file `commands.sh`. It will generate a file named `main.pdf`. The `commands.sh` is a bash script, and you can run it by typing `bash commands.sh` in your terminal. You can also run individual commands as listed in the `commands.sh` file to escape some repeated steps when composing your thesis. 
 
-Such escape can save a lot of time. Running the file `commands.sh` requires several Tex programs, e.g., `pdflatex`, `biber`, etc., some of which are in fact not required during developing the thesis.
+Such escapes can save a lot of time. Running the file `commands.sh` requires several Tex programs, e.g., `pdflatex`, `biber`, etc., some of which are in fact not required during developing the thesis.
 
 # 2. To write and manage your thesis
 
