@@ -4,6 +4,7 @@ LaTex Template for MSc/PhD Thesis
 - This template is a modified version based on the template [here](https://services.anu.edu.au/training/publishing-with-latex).
 
 - Contact: Sheng Wang
+
     sheng.wang(at)anu.edu.au; wangsheng.cas(at)gmail.com
 
 - Want to have a look at how it looks like? Here is an example of [Sheng's PhD thesis](https://openresearch-repository.anu.edu.au/handle/1885/271540).
