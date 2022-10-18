@@ -1,4 +1,4 @@
-LaTex template for PhD thesis
+LaTex Template for MSc/PhD Thesis
 =====
 
 This template is a modified version based on the template [here](https://services.anu.edu.au/training/publishing-with-latex).
