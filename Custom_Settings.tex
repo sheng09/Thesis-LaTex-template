@@ -1,0 +1,174 @@
+
+% ********************************************************************
+% Useful commands
+% ********************************************************************
+\newcommand{\ie}{i.\,e.~}
+\newcommand{\Ie}{I.\,e.~}
+\newcommand{\eg}{e.\,g.~}
+\newcommand{\Eg}{E.\,g.~}
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Optional Packages
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage[figuresright]{rotating}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+%\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{mathptmx} % Sheng prefer font close to New Roman
+%\usepackage{tgpagella} %The TEX Gyre Pagella family of fonts is based on the URW Palladio family, but heavily extended (https://www.tug.org/FontCatalogue/texgyrepagella/)
+
+\usepackage{fontawesome} % Use for loading symbol for URLs
+\usepackage{textcomp} % use for degree symbol (\textdegree)
+\usepackage{pdfpages}
+%\usepackage[document]{ragged2e}
+
+\usepackage{pdftexcmds}
+\usepackage[section]{minted} %works well in Overleaf but offline may need Python package to be installed and shell escape setting applied
+\usemintedstyle{friendly}
+\usemintedstyle{borland}
+
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage[font={itshape,raggedright},begintext=``,endtext="]{quoting}
+\usepackage{microtype}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{tabulary}
+\usepackage{glossaries}
+\usepackage{textcomp}
+
+% Sheng
+\DeclareUnicodeCharacter{1EA1}{\d{a}} % Sheng
+\newcommand{\SORTCITATION}[1]{}
+%The following allow display of equations with better presentation -----
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[titles]{tocloft}
+
+\newcommand{\listequationsname}{List of Equations}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}\par}
+\setlength{\cftmyequationsnumwidth}{2.5em}% Width of equation number in List of Equations
+
+\usepackage{amsmath,bm}
+
+\newcommand{\minus}{\scalebox{0.75}[1.0]{$-$}}
+% End of Sheng's revisions
+
+%New colors defined below
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mintedbackground}{rgb}{0.95,0.95,0.95}
+\definecolor{revblue}{rgb}{0.15,0.48,1.0}
+\definecolor{revlightblue}{rgb}{0.73,0.83, 0.99}
+\definecolor{revred}{rgb}{0.82,0.20,0.22}
+\definecolor{revlightred}{rgb}{0.99,0.76,0.77}
+
+%\usepackage{subcaption} %for sub figures
+
+\usepackage{fixme} %FixMe package
+\fxsetup{status=draft,author=} % <====== add this line
+\fxsetup{theme=color}
+\fxsetface{margin}{\scriptsize}
+%\definecolor{fxnote}{rgb}{0.0000,0.0000,0.0000}
+%\definecolor{fxwarning}{rgb}{0.0000,0.0000,0.0000}
+%\definecolor{fxerror}{rgb}{0.0000,0.0000,0.0000}
+%\definecolor{fxfatal}{rgb}{0.0000,0.0000,0.0000}
+
+\pdfcompresslevel=9 %best compression
+\pdfadjustspacing=1 %for small font expansion
+
+%\usepackage{chngcntr}
+%\counterwithin{figure}{section}
+
+%\usepackage[titles]{tocloft}
+%\setlength{\cftbeforechapskip}{5pt} \ sets spacing in Table of Contents
+% or see http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/squeeze.html
+
+%----------------------------------------------------------------------------------------
+%	BOX SETTINGS
+%----------------------------------------------------------------------------------------
+% from https://texblog.org/2015/09/30/fancy-boxes-for-theorem-lemma-and-proof-with-mdframed/
+
+%Proof
+\newcounter{prf}[section]\setcounter{prf}{0}
+\renewcommand{\theprf}{\arabic{chapter}.\arabic{section}.\arabic{prf}}
+\newenvironment{prf}[2][]{%
+\refstepcounter{prf}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!20]
+{\strut Proof~\theprf};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!20]
+{\strut Box~\theprf:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=red!20,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=2.5cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+%----------------------------------------------------------------------------------------
+%	Commands for revising the thesis
+%   by Sheng Wang
+%----------------------------------------------------------------------------------------
+\usepackage{soul}
+
+% command to add
+\newcommand{\revadd}[1]{{\color{revred} {#1}}}
+%\newcommand{\revadd}[1]{#1}
+
+% command to delete something
+\newcommand{\revdel}[1]{{\color{revred} \st{#1}}}
+%\newcommand{\revdel}[1]{}
+
+
+% command to add margin comments
+\usepackage[textwidth=1.7cm]{todonotes}
+\setlength{\marginparwidth}{2.1cm}
+\newcommand{\revcom}[1]{\todo[bordercolor=revlightred,linecolor=revlightred,backgroundcolor=revlightred,size=\scriptsize]{#1}}
+%\newcommand{\revcom}[1]{}
+
+% linenumbers
+\usepackage{lineno}
+\renewcommand\linenumberfont{\normalfont\tiny}
+\newcommand{\setlinenumbersheng}{\linenumbers}
+%\newcommand{\setlinenumbersheng}{}
