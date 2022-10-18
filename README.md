@@ -25,9 +25,9 @@ There are several files:
 
 - `Custom_Settings.tex`. This file sets format, and defines **many handy Tex functions/commands**.
 
-I would like you to focus on a few functions/commands defined in Lines 149-170 in `Custom_Settings.tex`. As you can see there, I defined two versions of Tex commands for **add**, **delete**, **margin comments**, **line numbers**. One version defines dummy commands, and the other defines effective commands. Therefore, by using one version and disabling the other, you can generate a pdf with tracked changes and comments, or the other pdf with all things cleaned. In other words, you do not need to touch any source files. All you need to do is to switch off one version commands and switch on the other version in `Custom_Settings.tex`. 
+    I would like you to focus on a few functions/commands defined in Lines 149-170 in `Custom_Settings.tex`. As you can see there, I defined two versions of Tex commands for **add**, **delete**, **margin comments**, **line numbers**. One version defines dummy commands, and the other defines effective commands. Therefore, by using one version and disabling the other, you can generate a pdf with tracked changes and comments, or the other pdf with all things cleaned. In other words, you do not need to touch any source files. All you need to do is to switch off one version commands and switch on the other version in `Custom_Settings.tex`. 
 
-Other settings and definitions of Tex commands are also in the file `Custom_Settings.tex`, for example, the color of changes, the color of citations, etc. You can change them. E.g., some people may like gray-scaled colors.
+    Other settings and definitions of Tex commands are also in the file `Custom_Settings.tex`, for example, the color of changes, the color of citations, etc. You can change them. E.g., some people may like gray-scaled colors.
 
 - `MastersDoctoralThesis.cls`. This is a very fundamental format setting file. You may not need to revise it. 
  
