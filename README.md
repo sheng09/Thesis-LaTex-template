@@ -3,6 +3,8 @@ LaTex template for PhD thesis
 
 This template is a modified version based on the template [here](https://services.anu.edu.au/training/publishing-with-latex).
 
+contact: Sheng Wang (sheng.wang(at)anu.edu.au; wangsheng.cas(at)gmail.com)
+
 # 0. Requirements
 
 
